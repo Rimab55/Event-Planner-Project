@@ -5,7 +5,7 @@ The purpose of this project is to recommend restaurants to someone based on a si
 - Yelp Open Dataset: https://www.yelp.com/dataset
 
 # EDA
-- The raw Yelp Open Dataset had many columns stored as columns that needed to be unpacked.
+- The raw Yelp Open Dataset required many data cleaning techniques using Pandas. Many restaurant attributes were stored as dictionaries within a column called "Attributes" and needed to be unpacked.
 - It was also necessary to create dummy variables for all categorical variables as most filters on Yelp are descriptive.
 
 ## Identifying similar restaurants
@@ -14,8 +14,3 @@ The purpose of this project is to recommend restaurants to someone based on a si
 
 ### Cosine distance
 - Cosine distance is defined as 1.0 minus the cosine similarity. Therefore, the smaller the value is in the Cosine distance matrix, the more the businesses are similar. We used pairwise cosine distance between restaurants to identify those that are the most similar to the chosen restaurant.
-
-Next Steps
-
-- Currently working on building a collaborative filtering recommendation system. Data was also gathered about reviewers to recommend restaurants based on other reviewers' ratings.
-- Use the Surprise Library to build the collaborative filtering recommendation system
